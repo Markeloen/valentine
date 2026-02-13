@@ -1,15 +1,8 @@
 import { defineConfig } from 'vite';
-import { resolve } from 'path';
 
 export default defineConfig({
+  base: './', // Ensures relative paths so it works on any repo/folder
   build: {
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'),
-        ask: resolve(__dirname, 'ask/index.html'),
-        flowers: resolve(__dirname, 'flowers/index.html'),
-        flowerAnim: resolve(__dirname, 'flowers/flower.html')
-      }
-    }
+    outDir: 'dist',
   }
 });
