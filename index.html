@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bg-hearts.css">
+</head>
+<body>
+
+    <audio id="bg-music" loop>
+        <source src="song/Rihanna-Only-Girl-In-The-World.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div id="music-control" class="hidden">
+        <button id="mute-btn" class="btn-small">🔊</button>
+    </div>
+
+    <!-- Stage 1: Greeting -->
+    <div id="stage-greeting" class="container">
+        <h1>Hello there beautiful! ❤️</h1>
+        <p>I want to take you out on a virtual date on Valentine's Day since we are away.</p>
+        <img src="gifs/Valentines Day Love Sticker by Pudgy Penguins.gif" alt="Love Penguin" class="intro-gif">
+        <button id="btn-greeting-next" class="btn">Start Date</button>
+    </div>
+
+    <!-- Stage 2: Pole Dance -->
+    <div id="stage-pole" class="container hidden">
+        <h2>I know you miss pole dancing...</h2>
+        <p>So here is some pole dancing for you before we start! 💃</p>
+        <div id="pole-gifs-container" class="hidden side-by-side">
+            <img src="gifs/Pole Dance GIF by Cleo The Hurricane.gif" alt="Pole Dance 1" class="gif-side">
+            <img src="gifs/Pole Dance GIF by Cleo The Hurricane (1).gif" alt="Pole Dance 2" class="gif-side">
+        </div>
+        <button id="btn-pole-start" class="btn">Watch Show</button>
+        <button id="btn-pole-next" class="btn hidden">That was hot! 🔥</button>
+    </div>
+
+    <!-- Stage 3: Yin Yang -->
+    <div id="stage-yin" class="container hidden">
+        <h2>Yin...</h2>
+        <p>I had a random thought today… what if I’m the Yang to your Yin? :D</p>
+        <div id="yin-image-container">
+            <img src="gifs/Feature_yinyang-cc0.webp" id="yin-static" alt="Yin Yang Static" class="intro-gif">
+            <img src="gifs/ying yang love GIF.gif" id="yin-gif" alt="Yin Yang Love" class="intro-gif hidden">
+        </div>
+        <button id="btn-yin-reveal" class="btn">You might...</button>
+        <button id="btn-yin-next" class="btn hidden">Continue ❤️</button>
+    </div>
+
+    <!-- Stage 4: Intro (Original) -->
+    <div id="stage-intro" class="container hidden">
+        <h1> ❤️</h1>
+        <img src="./ask/cat_heart.gif" alt="Cute Cat" class="intro-gif">
+        <p>I have a surprise for you...</p>
+        <button id="start-btn" class="btn">See Surprise</button>
+    </div>
+
+    <!-- Stage 5: Pick a Box (was Stage 2) -->
+    <div id="stage-boxes" class="container hidden">
+        <h2>Pick a mystery box! 🎁</h2>
+        <div class="box-container">
+            <div class="box">?</div>
+            <div class="box">?</div>
+            <div class="box">?</div>
+        </div>
+        <p id="box-message" class="hidden"></p>
+        <button id="next-btn" class="btn hidden">Continue</button>
+    </div>
+
+    <div id="stage-ask" class="hidden">
+        <div id="envelope-container">
+            <img src="ask/envelope.png" alt="Envelope" id="envelope" />
+            <p>♡ Letter for You ♡</p>
+        </div>
+
+        <div id="letter-container">
+            <div class="letter-window">
+                <h1 id="letter-title">Will you be my Valentine? ರ_ರ</h1>
+                <img src="ask/cat_heart.gif" class="cat" id="letter-cat" />
+                <div class="buttons" id="letter-buttons">
+                    <img src="ask/yes.png" class="btn yes-btn" alt="Yes" />
+                    <div class="no-wrapper">
+                        <img src="ask/no.png" class="btn no-btn" alt="No" />
+                    </div>
+                </div>
+                <p id="final-text" class="final-text hidden">
+                    <strong>Perfecto! B)</strong> 
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stage 7: Flowers -->
+    <iframe id="stage-flowers" class="hidden" src="" style="width: 100%; height: 100vh; border: none; position: absolute; top: 0; left: 0; z-index: 2000;"></iframe>
+
+    <script src="bg-hearts.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
